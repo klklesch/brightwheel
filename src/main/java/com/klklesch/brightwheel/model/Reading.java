@@ -3,6 +3,8 @@ package com.klklesch.brightwheel.model;
 import java.util.Date;
 import java.util.Objects;
 //import org.apache.commons.lang3.builder.ToStringBuilder;
+import com.google.gson.Gson;
+import com.google.gson.Strictness;
 
 public class Reading implements Comparable<Reading> {
     public Date getTimestamp() {
@@ -49,4 +51,10 @@ public class Reading implements Comparable<Reading> {
         return this.getTimestamp().compareTo(other.getTimestamp());
     }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
+
+    }
 }

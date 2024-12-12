@@ -14,12 +14,7 @@ import java.util.Calendar;
 @SpringBootTest
 public class CounterDeviceServiceTests {
 
-    private CounterDeviceService counterDeviceService = new CounterDeviceService();
-
-    @BeforeEach
-    public void setUp(){
-       counterDeviceService = new CounterDeviceService();
-    }
+    private CounterDeviceService counterDeviceService = new CounterDeviceService(false);
 
     @Test
     public void shouldCalculateCumulativeCount() {

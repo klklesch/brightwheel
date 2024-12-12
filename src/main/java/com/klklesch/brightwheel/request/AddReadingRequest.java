@@ -1,6 +1,7 @@
 package com.klklesch.brightwheel.request;
 import com.klklesch.brightwheel.model.Reading;
 import java.util.Collection;
+import com.google.gson.Gson;
 
 public class AddReadingRequest {
 
@@ -28,4 +29,9 @@ public class AddReadingRequest {
         this.readings = readings;
     }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this) + "\n";
+    }
 }
